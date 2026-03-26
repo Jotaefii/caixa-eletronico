@@ -56,9 +56,22 @@ float depositar(float saldoFix, float deposito){
     printf("     JOTACAIXA - DEPOSITAR       \n");
     printf("------------------------------\n\n");
 
-    printf("Valor para depositar: ");
+    printf("Valor: R$");
     scanf("%f", &deposito);
     while (getchar() != '\n');
+
+        /* Validacoes */
+        if (deposito < 0) {
+            printf("VALOR INVALIDO!\n");
+            printf("\n------------------------------\n\n");
+            return saldoFix;
+        }
+        else if (deposito == 0) {
+            printf("NADA DEPOSITADO!\n");
+        }
+        else {
+            printf("DEPOSITO CONCLUIDO!!\n");
+        }
 
     printf("\n------------------------------\n\n");
 
@@ -71,9 +84,25 @@ float saque(float saldoFix, float valorsaque){
     printf("       JOTACAIXA - SAQUE       \n");
     printf("------------------------------\n\n");
 
-    printf("Valor para saque: ");
+    printf("Valor: R$");
     scanf("%f", &valorsaque);
     while (getchar() != '\n');
+    
+        /* Validacoes */
+        if (valorsaque > saldoFix){
+            printf("SALDO INSUFICINETE!!\n");
+            printf("\n------------------------------\n\n");
+            return saldoFix;
+        }
+        else if (valorsaque <= 0) {
+            printf("INVALIDO!!");
+            printf("\n------------------------------\n\n");
+            return saldoFix;
+        }
+        else {
+            printf("SAQUE CONCLUIDO!!\n");
+        }
+    
 
     printf("\n------------------------------\n\n");
 
