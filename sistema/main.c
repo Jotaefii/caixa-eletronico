@@ -46,7 +46,7 @@ void verSaldo(float saldoFix){
     printf("       JOTACAIXA - SALDO       \n");
     printf("------------------------------\n\n");
 
-    printf("Saldo atual: %.2f\n\n", saldoFix);
+    printf("Saldo atual: R$%.2f\n\n", saldoFix);
 
     printf("------------------------------\n\n");
 }
