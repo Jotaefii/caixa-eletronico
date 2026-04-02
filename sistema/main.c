@@ -56,7 +56,7 @@ float depositar(float saldoFix, float deposito){
     printf("     JOTACAIXA - DEPOSITAR       \n");
     printf("------------------------------\n\n");
 
-    printf("Valor: R$");
+    printf("Valor para deposito: R$");
     scanf("%f", &deposito);
     while (getchar() != '\n');
 
@@ -84,7 +84,7 @@ float saque(float saldoFix, float valorsaque){
     printf("       JOTACAIXA - SAQUE       \n");
     printf("------------------------------\n\n");
 
-    printf("Valor: R$");
+    printf("Valor para saque: R$");
     scanf("%f", &valorsaque);
     while (getchar() != '\n');
     
