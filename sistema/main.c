@@ -58,7 +58,6 @@ float depositar(float saldoFix, float deposito){
 
     printf("Valor para deposito: R$");
     scanf("%f", &deposito);
-    while (getchar() != '\n');
 
         /* Validacoes */
         if (deposito < 0) {
@@ -86,7 +85,6 @@ float saque(float saldoFix, float valorsaque){
 
     printf("Valor para saque: R$");
     scanf("%f", &valorsaque);
-    while (getchar() != '\n');
     
         /* Validacoes */
         if (valorsaque > saldoFix){
