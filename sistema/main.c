@@ -14,6 +14,9 @@ int main(){
 
     do
     {
+        printf("====================\n");
+        printf("        MENU        \n");
+        printf("====================\n");
         printf("1 - Ver saldo\n");
         printf("2 - Depositar\n");
         printf("3 - Sacar\n");
@@ -42,19 +45,19 @@ int main(){
 
 /* Funcoes */
 void verSaldo(float saldoFix){
-    printf("\n------------------------------\n");
+    printf("\n=============================\n");
     printf("       JOTACAIXA - SALDO       \n");
-    printf("------------------------------\n\n");
+    printf("=============================\n\n");
 
     printf("Saldo atual: R$%.2f\n\n", saldoFix);
 
-    printf("------------------------------\n\n");
+    printf("=============================\n");
 }
 
 float depositar(float saldoFix, float deposito){
-    printf("\n------------------------------\n");
+    printf("\n=============================\n");
     printf("     JOTACAIXA - DEPOSITAR       \n");
-    printf("------------------------------\n\n");
+    printf("=============================\n\n");
 
     printf("Valor para deposito: R$");
     scanf("%f", &deposito);
@@ -62,7 +65,7 @@ float depositar(float saldoFix, float deposito){
         /* Validacoes */
         if (deposito < 0) {
             printf("VALOR INVALIDO!\n");
-            printf("\n------------------------------\n\n");
+            printf("\n=============================\n");
             return saldoFix;
         }
         else if (deposito == 0) {
@@ -72,16 +75,16 @@ float depositar(float saldoFix, float deposito){
             printf("DEPOSITO CONCLUIDO!!\n");
         }
 
-    printf("\n------------------------------\n\n");
+    printf("\n=============================\n");
 
     saldoFix = saldoFix + deposito;
     return saldoFix;
 }
 
 float saque(float saldoFix, float valorsaque){
-    printf("\n------------------------------\n");
+    printf("\n=============================\n");
     printf("       JOTACAIXA - SAQUE       \n");
-    printf("------------------------------\n\n");
+    printf("=============================\n\n");
 
     printf("Valor para saque: R$");
     scanf("%f", &valorsaque);
@@ -89,12 +92,12 @@ float saque(float saldoFix, float valorsaque){
         /* Validacoes */
         if (valorsaque > saldoFix){
             printf("SALDO INSUFICINETE!!\n");
-            printf("\n------------------------------\n\n");
+            printf("\n=============================\n");
             return saldoFix;
         }
         else if (valorsaque <= 0) {
             printf("INVALIDO!!");
-            printf("\n------------------------------\n\n");
+            printf("\n=============================\n");
             return saldoFix;
         }
         else {
@@ -102,7 +105,7 @@ float saque(float saldoFix, float valorsaque){
         }
     
 
-    printf("\n------------------------------\n\n");
+    printf("\n=============================\n");
 
     saldoFix = saldoFix - valorsaque;
     return saldoFix;
